@@ -92,7 +92,15 @@ puts letter_counts("hello") == { 'h' => 1, 'e' => 1 , 'l' => 2, 'o' => 1}
 # *********************************************
 
 # Write a boolean function palindrome? which takes in a word and returns true if it is palindrome.
-
+def palindrome?(string)
+  string == string.reverse
+  # return true if string.length == 1
+  # fold = string.length / 2
+  # fold.times do |i|
+  #   return false unless string[i] == string[string.length -1 -i]
+  # end
+  # true
+end
 #Tests
 puts "\nPalindrome:\n" + "*" * 15 + "\n"
 puts palindrome?("a") == true
@@ -101,4 +109,3 @@ puts palindrome?("ab") == false
 puts palindrome?("racecar") == true
 puts palindrome?("coder") == false
 # *********************************************
-# Write a function that will reverse the digits of a number.
